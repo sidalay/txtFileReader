@@ -1,22 +1,68 @@
 #include <iostream>
 #include <fstream>
+#include "FileManager.hpp"
+
 
 int main() {
-    std::ifstream input {"Expenses.txt", std::ifstream::in};
+    FileReader Input{"Input.txt"};
 
-    char letter = input.get();
+    Input.Print();
 
-    while (input.good()) {
-        std::cout << letter;
-        letter = input.get();
-    }
+    // Input.Print(Storage::All);
 
-    input.close();
+    // // Emplace_back when hitting a space
+    // Input.GrabDigits(Modifier::TS);
+    // Input.Print(Storage::Digits);
+    // Input.Clear(Storage::Digits);
 
-    return 0;
+    // // Emplace_back when hitting \n
+    // Input.GrabDigits(Modifier::TNL);
+    // Input.Print(Storage::Digits);
+    // Input.Clear(Storage::Digits);
+
+    // // Emplace_back when hitting or space or \n
+    // Input.GrabDigits(Modifier::TSNL);
+    // Input.Print(Storage::Digits);
+    // Input.Clear(Storage::Digits);
+
+    // // Emplace_back when hitting a space
+    // Input.GrabWords(Modifier::TS);
+    // Input.Print(Storage::Words);
+    // Input.Clear(Storage::Words);
+
+    // // Emplace_back when hitting \n
+    // Input.GrabWords(Modifier::TNL);
+    // Input.Print(Storage::Words);
+    // Input.Clear(Storage::Words);
+
+    // // Emplace_back when hitting or space or \n
+    // Input.GrabWords(Modifier::TSNL);
+    // Input.Print(Storage::Words);
+    // Input.Clear(Storage::Words);
+
+    // // Emplace_back when hitting a space
+    // Input.GrabAlpha('a', Modifier::TS);
+    // Input.Print(Storage::Alpha);
+    // Input.Clear(Storage::Alpha);
+
+    // // Emplace_back when hitting \n
+    // Input.GrabAlpha('a', Modifier::TNL);
+    // Input.Print(Storage::Alpha);
+    // Input.Clear(Storage::Alpha);
+
+    // // Emplace_back when hitting or space or \n
+    // Input.GrabAlpha('a', Modifier::TSNL);
+    // Input.Print(Storage::Alpha);
+    // Input.Clear(Storage::Alpha);
+
+    // Input.GrabDigits(Modifier::TSNL);
+    // Input.GrabWords(Modifier::TSNL);
+    // Input.CountAlpha('a');
+    // Input.CountDigits(268);
+    // Input.CountWords("react");
+
+    // Input.CountString("f2u6c8k");
+    // Input.CountString("j345avascript");
+    // Input.CountString("///");
+
 }
-
-/* 
-std::ifstream file{"input.txt"};
-std::vector<int> data {std::istream_iterator<int>{file}, {}};
-*/
