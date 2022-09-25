@@ -157,6 +157,9 @@ void FileReader::GrabDigits(Modifier Type) {
                 if (isdigit(Character)) {
                     Buffer += Character;
                 }
+                else if (isalpha(Character)) {
+                    continue;
+                }
                 else {
                     if (!Buffer.empty()) {
                         DigitsContainer.emplace_back(std::stoi(Buffer));
@@ -221,6 +224,9 @@ void FileReader::GrabWords(Modifier Type) {
                 if (isalpha(Character)) {
                     Buffer += Character;
                 }
+                else if (isdigit(Character)) {
+                    continue;
+                }
                 else {
                     if (!Buffer.empty()) {
                         WordsContainer.emplace_back(Buffer);
@@ -279,6 +285,9 @@ void FileReader::GrabAlpha(char Alpha, Modifier Type) {
                 if (Character == Alpha) {
                     Buffer += Character;
                 }
+                else if (Character != ' ') {
+                    continue;
+                }
                 else {
                     if (!Buffer.empty()) {
                         AlphaContainer.emplace_back(Buffer);
@@ -329,7 +338,10 @@ void FileReader::GrabAlpha(char Alpha, Modifier Type) {
 }
 
 int FileReader::CountDigits(int Number) {
-    std::ifstream InputCopy{FilePath}; // make copy of Input because .get() moves
+    if (DigitsContainer.empty()) {
+        std::cout << "Digits container is empty.\n\n";
+        return 0;
+    }
     int Counter{};
 
     for (auto i:DigitsContainer) {
@@ -338,12 +350,14 @@ int FileReader::CountDigits(int Number) {
         }
     }
     std::cout << "The number '" << Number << "' appears " << Counter << " times.\n\n"; 
-    InputCopy.close();
     return Counter;
 }
 
 int FileReader::CountWords(std::string Word) {
-    std::ifstream InputCopy{FilePath}; // make copy of Input because .get() moves
+    if (WordsContainer.empty()) {
+        std::cout << "Words container is empty.\n\n";
+        return 0;
+    }
     int Counter{};
 
     for (auto i:WordsContainer) {
@@ -352,7 +366,6 @@ int FileReader::CountWords(std::string Word) {
         }
     }
     std::cout << "The word '" << Word << "' appears " << Counter << " times.\n\n";
-    InputCopy.close();
     return Counter;
 }
 

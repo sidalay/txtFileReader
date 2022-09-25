@@ -4,9 +4,9 @@
 
 
 int main() {
-    FileReader Input{"Input.txt"};
+    // FileReader Input{"Input.txt"};
 
-    Input.Print();
+    // Input.Print();
 
     // Input.Print(Storage::All);
 
@@ -20,7 +20,7 @@ int main() {
     // Input.Print(Storage::Digits);
     // Input.Clear(Storage::Digits);
 
-    // // Emplace_back when hitting or space or \n
+    // // Emplace_back when hitting space or \n
     // Input.GrabDigits(Modifier::TSNL);
     // Input.Print(Storage::Digits);
     // Input.Clear(Storage::Digits);
@@ -35,7 +35,7 @@ int main() {
     // Input.Print(Storage::Words);
     // Input.Clear(Storage::Words);
 
-    // // Emplace_back when hitting or space or \n
+    // // Emplace_back when hitting space or \n
     // Input.GrabWords(Modifier::TSNL);
     // Input.Print(Storage::Words);
     // Input.Clear(Storage::Words);
@@ -50,7 +50,7 @@ int main() {
     // Input.Print(Storage::Alpha);
     // Input.Clear(Storage::Alpha);
 
-    // // Emplace_back when hitting or space or \n
+    // // Emplace_back when hitting space or \n
     // Input.GrabAlpha('a', Modifier::TSNL);
     // Input.Print(Storage::Alpha);
     // Input.Clear(Storage::Alpha);
@@ -65,4 +65,10 @@ int main() {
     // Input.CountString("j345avascript");
     // Input.CountString("///");
 
+    FileReader Friends{"friends.txt"};
+
+
+    Friends.GrabWords(Modifier::TSNL);
+    Friends.CountWords("vampire");
+    Friends.CountString("vampire");
 }

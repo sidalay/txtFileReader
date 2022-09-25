@@ -55,7 +55,6 @@ public:
     int CountString(std::string String);
 
     // grab with specified filter
-    // grab with digits and alphas filtered separately
 
 };
 
