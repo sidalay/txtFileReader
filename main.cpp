@@ -4,71 +4,64 @@
 
 
 int main() {
-    // FileReader Input{"Input.txt"};
+    FileReader Input{"Input.txt"};
 
-    // Input.Print();
+    Input.Print();
 
-    // Input.Print(Storage::All);
+    Input.Print(Storage::All);
 
-    // // Emplace_back when hitting a space
-    // Input.GrabDigits(Modifier::TS);
-    // Input.Print(Storage::Digits);
-    // Input.Clear(Storage::Digits);
+    // Emplace_back when hitting a space
+    Input.GrabDigits(Modifier::TS);
+    Input.Print(Storage::Digits);
+    Input.Clear(Storage::Digits);
 
-    // // Emplace_back when hitting \n
-    // Input.GrabDigits(Modifier::TNL);
-    // Input.Print(Storage::Digits);
-    // Input.Clear(Storage::Digits);
+    // Emplace_back when hitting \n
+    Input.GrabDigits(Modifier::TNL);
+    Input.Print(Storage::Digits);
+    Input.Clear(Storage::Digits);
 
-    // // Emplace_back when hitting space or \n
-    // Input.GrabDigits(Modifier::TSNL);
-    // Input.Print(Storage::Digits);
-    // Input.Clear(Storage::Digits);
+    // Emplace_back when hitting space or \n
+    Input.GrabDigits(Modifier::TSNL);
+    Input.Print(Storage::Digits);
+    Input.Clear(Storage::Digits);
 
-    // // Emplace_back when hitting a space
-    // Input.GrabWords(Modifier::TS);
-    // Input.Print(Storage::Words);
-    // Input.Clear(Storage::Words);
+    // Emplace_back when hitting a space
+    Input.GrabWords(Modifier::TS);
+    Input.Print(Storage::Words);
+    Input.Clear(Storage::Words);
 
-    // // Emplace_back when hitting \n
-    // Input.GrabWords(Modifier::TNL);
-    // Input.Print(Storage::Words);
-    // Input.Clear(Storage::Words);
+    // Emplace_back when hitting \n
+    Input.GrabWords(Modifier::TNL);
+    Input.Print(Storage::Words);
+    Input.Clear(Storage::Words);
 
-    // // Emplace_back when hitting space or \n
-    // Input.GrabWords(Modifier::TSNL);
-    // Input.Print(Storage::Words);
-    // Input.Clear(Storage::Words);
+    // Emplace_back when hitting space or \n
+    Input.GrabWords(Modifier::TSNL);
+    Input.Print(Storage::Words);
+    Input.Clear(Storage::Words);
 
-    // // Emplace_back when hitting a space
-    // Input.GrabAlpha('a', Modifier::TS);
-    // Input.Print(Storage::Alpha);
-    // Input.Clear(Storage::Alpha);
+    // Emplace_back when hitting a space
+    Input.GrabAlpha('a', Modifier::TS);
+    Input.Print(Storage::Alpha);
+    Input.Clear(Storage::Alpha);
 
-    // // Emplace_back when hitting \n
-    // Input.GrabAlpha('a', Modifier::TNL);
-    // Input.Print(Storage::Alpha);
-    // Input.Clear(Storage::Alpha);
+    // Emplace_back when hitting \n
+    Input.GrabAlpha('a', Modifier::TNL);
+    Input.Print(Storage::Alpha);
+    Input.Clear(Storage::Alpha);
 
-    // // Emplace_back when hitting space or \n
-    // Input.GrabAlpha('a', Modifier::TSNL);
-    // Input.Print(Storage::Alpha);
-    // Input.Clear(Storage::Alpha);
+    // Emplace_back when hitting space or \n
+    Input.GrabAlpha('a', Modifier::TSNL);
+    Input.Print(Storage::Alpha);
+    Input.Clear(Storage::Alpha);
 
-    // Input.GrabDigits(Modifier::TSNL);
-    // Input.GrabWords(Modifier::TSNL);
-    // Input.CountAlpha('a');
-    // Input.CountDigits(268);
-    // Input.CountWords("react");
+    Input.GrabDigits(Modifier::TSNL);
+    Input.GrabWords(Modifier::TSNL);
+    Input.CountAlpha('a');
+    Input.CountDigits(268);
+    Input.CountWords("react");
 
-    // Input.CountString("f2u6c8k");
-    // Input.CountString("j345avascript");
-    // Input.CountString("///");
-
-    FileReader Friends{"friends.txt"};
-
-
-    Friends.GrabWords(Modifier::TSNL);
-    Friends.CountWords("vampire");
-    Friends.CountString("vampire");
+    Input.CountString("h2e6l8lo");
+    Input.CountString("w345orld");
+    Input.CountString("///");
 }
